@@ -3,6 +3,6 @@
 
 <p><%= link_to 'Sign in', new_user_session_path %></p>
 
+<% if current_user %>
 <p><%= link_to 'Add a new tool', new_tool_path %></p>
-
-
+<% end %>
