@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'tools/index'
-  get 'tools/show'
+  get "tools/:id",      to: "tools#show"
   get 'tools/new'
   get 'tools/create'
   get 'tools/edit'
