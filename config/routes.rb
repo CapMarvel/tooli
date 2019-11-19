@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'tools/index'
+  get 'tools', to: "tools#index"
   get 'tools/show'
   get 'tools/new'
   get 'tools/create'
