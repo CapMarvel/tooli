@@ -7,7 +7,12 @@ class BookingsController < ApplicationController
   # Routes
   # Views
 
-  def index
-    @bookings.tool = @tool
+  def show
+    @tool = Tool.find(params[:id])
+    @tool.bookings
+  end
+
+  def create
+
   end
 end
