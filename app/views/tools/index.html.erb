@@ -1,12 +1,6 @@
 <h1>Tools#index</h1>
 <p><%= link_to "Owner view tool", tool_path(@tools.first) %></p>
 
-<!-- # we get fromt he controller @tools with all the tools instance
-# we want to grab each individual instance
-# with each instance we can display the name, description and link
- -->
-<p><%= link_to 'Sign in', new_user_session_path %></p>
-
 <% if current_user %>
 <p><%= link_to 'Add a new tool', new_tool_path %></p>
 
