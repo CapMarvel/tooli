@@ -1,7 +1,5 @@
 <h1>Tools#index</h1>
-<p>Find me in app/views/tools/index.html.erb</p>
 <p><%= link_to "Owner view tool", tool_path(@tools.first) %></p>
-<p><%= link_to 'Book a tool', bookings_path %></p>
 
 <!-- # we get fromt he controller @tools with all the tools instance
 # we want to grab each individual instance
@@ -11,6 +9,15 @@
 
 <% if current_user %>
 <p><%= link_to 'Add a new tool', new_tool_path %></p>
+
+<!-- <p><%= link_to 'Book a tool', bookings_path %></p> -->
+ <% @tools.each do |tool| %>
+   <ul>
+    <li><%= link_to tool.name, tool_path(tool.id) %></li>
+  </ul>
+  <% end %>
+<% if current_user %>
+<% end %>
 
 <% end %>
 
@@ -187,4 +194,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </html>
-
