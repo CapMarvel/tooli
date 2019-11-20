@@ -4,7 +4,7 @@ class ToolsController < ApplicationController
   end
 
   def show
-    @tool=Tool.find(params[:id]) #find the tool the user has
+    @tool = Tool.find(params[:id]) #find the tool the user has
   end
 
   def new
