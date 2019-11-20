@@ -4,7 +4,7 @@ class ToolsController < ApplicationController
   end
 
   def show
-    @tool=Tool.find(params[:id]) #find the tool the user has
+    @tool = Tool.find(params[:id]) #find the tool the user has
   end
 
   def new
@@ -14,8 +14,7 @@ class ToolsController < ApplicationController
   def create
     @tool = Tool.new(tool_params)
     @tool.user_id = current_user.id
-    @tool.save
-    if @tool.save
+    if @tool.save!
       redirect_to @tool
     else
       render :new
