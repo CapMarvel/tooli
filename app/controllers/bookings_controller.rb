@@ -10,4 +10,8 @@ class BookingsController < ApplicationController
   def index
     @bookings.tool = @tool
   end
+
+  def new
+    @booking = Booking.new
+  end
 end

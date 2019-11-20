@@ -1,0 +1,12 @@
+<h1>Book it!</h1>
+
+
+  <%= simple_form_for(@booking) do |f| %>
+
+  <%= f.input :rental_start, as: :date %>
+   <%= f.input :rental_end, as: :date %>
+
+  <%= f.submit %>
+
+<% end %>
+
