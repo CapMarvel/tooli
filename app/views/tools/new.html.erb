@@ -1,2 +1,21 @@
-<h1>Tools#new</h1>
-<p>Find me in app/views/tools/new.html.erb</p>
+<h1>Create a new tool</h1>
+
+<div class="add-tool-form">
+  <%= simple_form_for(@tool) do |f| %>
+  <div class="field">
+    <%= f.label :name  %>
+    <%= f.text_field :name  %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+  <div class="submit-button">
+  <%= f.submit %>
+  </div>
+  <% end %>
+</div>
