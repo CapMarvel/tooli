@@ -1,10 +1,10 @@
 class ToolsController < ApplicationController
   def index
-    @tools=Tool.all #added for Index Page
+    @tools = Tool.all
   end
 
   def show
-    @tool = Tool.find(params[:id]) #find the tool the user has
+    @tool = Tool.find(params[:id])
   end
 
   def new
