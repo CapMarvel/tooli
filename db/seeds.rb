@@ -29,4 +29,3 @@ tool3.save!
 
 #boooking1=Booking.create(user:rental_start: '01122019',rental_end:'0512.2019')
 puts "Created #{User.count} and #{Tool.count}"
-
