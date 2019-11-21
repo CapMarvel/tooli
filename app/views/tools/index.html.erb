@@ -1,2 +1,190 @@
 <h1>Tools#index</h1>
-<p>Find me in app/views/tools/index.html.erb</p>
+<p><%= link_to "Owner view tool", tool_path(@tools.first) %></p>
+
+<% if current_user %>
+<p><%= link_to 'Add a new tool', new_tool_path %></p>
+
+<!-- <p><%= link_to 'Book a tool', bookings_path %></p> -->
+ <% @tools.each do |tool| %>
+   <ul>
+    <li><%= link_to tool.name, tool_path(tool.id) %></li>
+  </ul>
+  <% end %>
+<% if current_user %>
+<% end %>
+
+<% end %>
+
+    <nav class="navbar navbar-expand-xl py-0 position-absolute w-100" id="navbar">
+      <!-- nav for xl screens -->
+
+      <div class="d-none d-xl-flex flex-grow-1" id="xlNavbar">
+        <a class="navbar-brand py-0 pr-0 pl-2 text-white" href="#">Tooli</a>
+        <div class="navbar-nav ml-auto">
+          <p><%= link_to 'Book a tool', bookings_path %></p>
+          <p><%= link_to 'Add a new tool', new_tool_path %></p>
+         <%= link_to 'Sign in', new_user_session_path %>
+          <%= link_to 'logout', destroy_user_session_path, method: 'delete'  %>
+          <a class="nav-item nav-link py-0 px-2 text-white" href="#"><div class="px-2"></div></a>
+          <a class="nav-item nav-link py-0 px-2 text-white" href="#"><div class="px-2">Sign up</div></a>
+
+
+          <a class="nav-item nav-link py-0 px-2 text-white" href="#"><div class="px-2">Log in</div></a>
+        </div>
+      </div>
+
+      <!-- button and collapsed menu -->
+
+      <a class="navbar-toggler navbar-brand py-0 pr-0 pl-2 border-0 position-relative collapsed" role="button" data-toggle="collapse" href="#navbarMenu" id="navbarMenuToggler">Tooli</a>
+
+      <div class="collapse navbar-collapse px-4 pb-4 font-weight-light bg-white position-absolute" id="navbarMenu">
+        <a class="nav-item nav-link" href="#">Home</a>
+        <hr/>
+        <a class="nav-item nav-link" href="#">Share with friends</a>
+        <a class="nav-item nav-link" href="#">Refer vendors</a>
+        <hr/>
+        <a class="nav-item nav-link" href="#">Sign up</a>
+        <a class="nav-item nav-link" href="#">Log in</a>
+        <hr/>
+        <a class="nav-item nav-link" href="#">Help</a>
+      </div>
+    </nav>
+
+    <!-- Hero content -->
+    <div id="hero" class="position-relative">
+      <div class="container-fluid">
+        <h2 class="mb-0 pb-3 pb-sm-4 text-white d-xl-none">Rent great tools.</h2>
+      </div>
+    </div>
+
+    <!-- Search form -->
+    <!-- <div id="searchForm">
+      <div class="container-fluid">
+        <form class="py-4 rounded bg-white">
+          <h2
+          class="d-none d-xl-block">Rent all the tools you need
+          </h2>
+          <div class="form-group">
+            <label for="where"><small><b>WHERE</b></small></label>
+            <input type="text" class="form-control form-control-lg rounded" id="where" placeholder="Anywhere">
+          </div>
+          <div class="row no-gutters">
+            <div class="form-group col-6">
+              <label for="checkin"><small><b>RENTAL START</b></small></label>
+              <input type="date" class="form-control form-control-lg rounded-left rounded-left" id="checkin" placeholder="mm/dd/yyyy">
+            </div>
+            <div class="form-group col-6">
+              <label for="checkout"><small><b>RENTAL END</b></small></label>
+              <input type="date" class="form-control form-control-lg rounded-right border-left-0" id="checkout" placeholder="mm/dd/yyyy">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress"><small><b>Tool options</b></small></label>
+            <select class="form-control form-control-lg rounded" id="guests">
+              <option>Find a tool</option>
+              <option>Offer a tool</option>
+            </select>
+          </div>
+          <div class="d-flex flex-column align-items-xl-end">
+            <button type="submit" class="btn btn-danger px-4 mt-2">Search</button>
+          </div>
+        </form>
+      </div>
+    </div> -->
+
+    <div class="container-fluid">
+      <!-- First Section -->
+      <div class="pt-3 pt-lg-4 pt-xl-5 headings">
+        <h4 class="mb-3">Find great tools in your city</h4>
+        <p><span class="d-none d-md-inline">Check some of our options in Berlin</b></p>
+      </div>
+
+      <div class="row flex-nowrap pt-2 scrollableRow no-gutters">
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="review">
+            <div class="aspectRatioBox mb-3 rounded" style="background-image: url('https://res.cloudinary.com/leocosta/image/upload/v1574247357/todd-quackenbush-IClZBVw5W5A-unsplash_k0fiew.jpg')">
+            </div>
+            <div class="rating mb-2 text-black-50">
+<!--               <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i> -->
+            </div>
+            <p class="description pr-4"><small>
+              Renting via Tooli was a fantastic experience. The service was fast, secure and quick. We will definitely use it again.
+            </small></p>
+            <div class="user d-flex flex-row">
+              <i class="far fa-user-circle mr-3"></i>
+              <div>
+                <p class="name mb-0"><b>Shelley</b></p>
+                <p class="location mb-0"><small>United States</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="review">
+            <div class="aspectRatioBox mb-3 rounded" style="background-image: url('https://res.cloudinary.com/leocosta/image/upload/v1574247435/jeshoots-com-VdOO4_HFTWM-unsplash_bvcroq.jpg')">
+            </div>
+            <div class="rating mb-2 text-black-50">
+<!--               <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i> -->
+            </div>
+            <p class="description pr-4"><small>
+              Our renter Judy was very easy-going. She gave us all the necessary gear and instructions of how to use it our equipment. It was overall a great solution to our problem.
+            </small></p>
+            <div class="user d-flex flex-row">
+              <i class="far fa-user-circle mr-3"></i>
+              <div>
+                <p class="name mb-0"><b>Alyssa</b></p>
+                <p class="location mb-0"><small>United States</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="review">
+            <div class="aspectRatioBox mb-3 rounded" style="background-image: url('https://res.cloudinary.com/leocosta/image/upload/v1574247514/matt-artz-dh3zAdGGOIY-unsplash_gx05if.jpg')">
+            </div>
+            <div class="rating mb-2 text-black-50">
+<!--               <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i> -->
+            </div>
+            <p class="description pr-4"><small>
+              We managed to solve all our problems thanks to the assistance from Chris and his tools! We are not very handy people but everything was easy and convenient. Well deserved 5 stars review.
+            </small></p>
+            <div class="user d-flex flex-row">
+              <i class="far fa-user-circle mr-3"></i>
+              <div>
+                <p class="name mb-0"><b>Sarah</b></p>
+                <p class="location mb-0"><small>United States</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filler -->
+        <div class="d-xl-none filler">
+        </div>
+      </div>
+    </div>
+
+      <hr class="mt-2 mt-md-3 mb-0" />
+      <!-- Home Listings -->
+      <div class="pt-4 pt-lg-5 headings">
+
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>

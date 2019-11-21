@@ -25,4 +25,8 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:user_id, :tool_id, :rental_end, :rental_start)
   end
+
+  def new
+    @booking = Booking.new
+  end
 end

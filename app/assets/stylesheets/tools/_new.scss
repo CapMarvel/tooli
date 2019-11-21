@@ -1,0 +1,17 @@
+.add-tool-form {
+  display: flex;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.field {
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.submit-button {
+  justify-content: center;
+  padding: 10px;
+}

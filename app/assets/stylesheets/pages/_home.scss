@@ -1,1 +1,239 @@
-// Specific CSS for your home-page
+/* ----------- Container ----------- */
+@media (min-width: 1200px) {
+  .container-fluid {
+    max-width: 1080px;
+  }
+}
+
+.container-fluid, .container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* ----------- Navigation ----------- */
+
+@media (min-width: 1200px) {
+  #navbarMenu {
+    display: none !important;
+  }
+
+  #xlNavbar .nav-link div:hover {
+    border-bottom: 2px solid #fff;
+  }
+}
+
+#navbar {
+  z-index: 1;
+}
+
+#xlNavbar .navbar-brand, #navbarMenuToggler, #xlNavbar .nav-link {
+  line-height: 80px;
+}
+
+#xlNavbar .nav-link {
+  font-size: 14px;
+}
+
+#navbarMenuToggler {
+  color: rgb(255, 90, 95);
+  transition: color 0.25s;
+  z-index: 1;
+}
+
+#navbarMenuToggler.collapsed {
+  color: #fff;
+}
+
+#navbarMenu .nav-link {
+  color: #333;
+}
+
+#navbarMenu {
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 88px;
+}
+
+#navbarMenu .nav-link {
+  padding: 12px 0;
+}
+
+/* ----------- Hero ----------- */
+
+#hero {
+  background-image: url(https://res.cloudinary.com/dcuvoemqb/image/upload/v1554993822/airbnb%20images/luca-bravo-121931-unsplash.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+
+
+#hero h2 {
+  padding-top: 168px;
+}
+#message {
+  bottom: 0;
+  right: 0;
+}
+@media (min-width: 1200px) {
+  #hero {
+    height: 100vh;
+    min-height: 650px;
+  }
+}
+/* ----------- Search form ----------- */
+#searchForm .form-control {
+  font-size: 15px;
+  font-weight: 300;
+  border-radius: 0;
+}
+#searchForm .btn-danger {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: #FF5A5F;
+  border-color: #FF5A5F;
+}
+@media (min-width: 1200px) {
+  #searchForm {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+  }
+  #searchForm form {
+    padding: 32px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    max-width: 441px;
+  }
+}
+/* ----------- Content ----------- */
+@media (max-width: 767px) {
+  .headings h4 {
+    font-size: 18px;
+  }
+  .headings p {
+    font-size: 13px;
+  }
+}
+.scrollableRow {
+  overflow-x: scroll;
+  margin-left: -24px;
+  margin-right: -24px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.scrollableRow > [class*=col-] {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.scrollableRow .filler {
+  min-width: 18px;
+}
+.aspectRatioBox {
+  padding-top: calc(2 / 3 * 100%);
+  background-size: cover;
+  background-position: center;
+}
+.description {
+  line-height: 18px;
+}
+/* ----------- Reviews ----------- */
+.review .description {
+  max-height: 60px;
+  overflow: hidden;
+  /* using line clamp */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.review .user i {
+  font-size: 48px;
+}
+.review .user .name b {
+  font-weight: 500;
+}
+.review .user .location {
+  line-height: 18px;
+}
+/* ------------ Value Props ------------ */
+.valueProp .icon {
+  font-size: 40px;
+  line-height: 40px;
+  color: rgb(65, 198, 188);
+}
+.valueProp .title {
+  font-weight: 500;
+}
+/* ------------ Listings ------------ */
+.listing .location {
+  line-height: 18px;
+}
+.listing .location small {
+  font-weight: 700;
+  font-size: 12px;
+}
+.listing .title {
+  font-weight: 600;
+  margin-top: 1px;
+  color: #484848;
+}
+.listing .pricing {
+  line-height: 18px;
+  margin-top: 2px;
+}
+.listing .pricing small {
+  font-weight: 300;
+}
+.listing .info {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 3px;
+}
+.listing .info .rating {
+  font-size: 8.5px;
+  letter-spacing: -1px;
+  margin-right: 3px;
+}
+.listingsLink {
+  color: #008489;
+  font-size: 17px;
+}
+.overlay {
+  top: 0;
+  background-color: rgba(0, 255, 255, 0.3);
+}
+/* ----------- Call to action ----------- */
+@media (max-width: 767px) {
+  .callToAction.headings p {
+    font-size: 1rem;
+  }
+}
+.callToAction button {
+  background-color: #008489;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* ----------- Footer ----------- */
+
+.footerNav h5, .footerNav a {
+  font-size: 14px;
+}
+
+.footerNav h5 {
+  line-height: 18px;
+}
+
+.footerNav .social {
+  font-size: 18px;
+  height: 18px;
+}
+
+.footerBar small {
+  font-size: 14px;
+}
+
+.routes {
+  padding: 5px;
+  margin-left: 96px;
+}
