@@ -1,12 +1,13 @@
-<h1>Book it!</h1>
 
 
-  <%= simple_form_for(@booking) do |f| %>
+<div class="container">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>Flatpickr Demo</h2>
 
-  <%= f.input :rental_start, as: :date %>
-   <%= f.input :rental_end, as: :date %>
-
-  <%= f.submit %>
-
-<% end %>
-
+    <%= simple_form_for @booking, method: "post" do |f| %>
+      <%= f.input :rental_start, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :rental_end, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.submit "Go", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
