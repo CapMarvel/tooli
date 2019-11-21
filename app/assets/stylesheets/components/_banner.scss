@@ -1,0 +1,16 @@
+.banner {
+  background-image: url("https://images.pexels.com/photos/1029243/pexels-photo-1029243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-position: center top;
+  min-height: 100px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.banner-title {
+  display: flex;
+  color: #f75854;
+  text-shadow: 1px 1px 1px #000;
+  justify-content: center;
+  padding-top: 70px;
+}
