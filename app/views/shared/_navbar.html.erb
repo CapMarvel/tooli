@@ -15,6 +15,9 @@
       </li>
       <% if current_user %>
       <li class="nav-item active">
+        <%= link_to 'Add a new tool', new_tool_path, class: "nav-link"%>
+      </li>
+      <li class="nav-item active">
           <%= link_to 'My profile', user_path(current_user), class: "nav-link"  %>
       </li>
       <li class="nav-item active">
