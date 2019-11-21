@@ -23,12 +23,25 @@ class ToolsController < ApplicationController
   end
 
   def edit
+    @tool = Tool.find(params[:id]) #takes all tools from database
+
+
   end
 
   def update
+    @tool = Tool.find(params[:id])
+    @tool.update(tool_params) #update tool in the database
+    if @tool.save!
+      redirect_to @tool
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @tool = Tool.find(params[:id])
+    @tool.destroy
+    redirect_to tools_path
   end
 
   private
