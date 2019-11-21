@@ -62,7 +62,7 @@
 /* ----------- Hero ----------- */
 
 #hero {
-  background-image: url(https://res.cloudinary.com/dcuvoemqb/image/upload/v1554993822/airbnb%20images/luca-bravo-121931-unsplash.jpg);
+  background-image: url("https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
   background-position: center bottom;
 }
@@ -77,7 +77,7 @@
 }
 @media (min-width: 1200px) {
   #hero {
-    height: 100vh;
+    height: 100px;
     min-height: 650px;
   }
 }
