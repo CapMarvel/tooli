@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
     @booking.tool_id = @tool.id
 
     if @booking.save
-      redirect_to @tool
+      redirect_to @tool, notice: 'Booking was successfully created.'
     else
       render :new
     end
