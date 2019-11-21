@@ -1,10 +1,10 @@
 <h1>Book it!</h1>
 
 
-  <%= simple_form_for(@booking) do |f| %>
+  <%= simple_form_for [@tool, @booking], url: tool_bookings_path do |f| %>
 
-  <%= f.input :rental_start, as: :date %>
-   <%= f.input :rental_end, as: :date %>
+    <%= f.input :rental_start, as: :date %>
+    <%= f.input :rental_end, as: :date %>
 
   <%= f.submit %>
 
