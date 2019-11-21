@@ -1,10 +1,15 @@
-<h1>Tool: <%= @tool.name %></h1>
-<p> Description of the tool: <%=  @tool.description%></p>
-<p> Location of the tool: <%= @tool.address%></p>
-<p> Owner of the Tool: <%= @tool.user.name %></p>
-<p> Picture of the Location </p>
-<p> Edit Delete Options  </p>
-<%= link_to "Back to home", root_path %>
-<%= link_to "Back to index", tools_path %>
-<p><%= link_to "Book", new_tool_booking_path(@tool) %></p>
+<div class="main-container">
 
+  <h1>Tool: <%= @tool.name %></h1>
+
+
+  <p> Description of the tool: <%=  @tool.description%></p>
+  <p> Location of the tool: <%= @tool.address%></p>
+  <p> Owner of the Tool: <%= @tool.user.name %></p>
+  <p> Picture of the Location </p>
+  <p> Edit Delete Options  </p>
+  <%= link_to "Back to home", root_path, class: 'detail-button' %>
+  <%= link_to "Back to index", tools_path, class: 'detail-button' %>
+  <%= link_to "Book", new_tool_booking_path(@tool), class: 'detail-button' %>
+
+</div>

@@ -1,11 +1,12 @@
-<h1>Your profile</h1>
+<div class="main-container">
 
-<h2><%= current_user.name %></h2>
+  <h1>Profile <%= current_user.name %></h1>
 
-<p>Your personal information</p>
-<p><%= current_user.email %></p>
-<p><%= current_user.address %></p>
+  <p>Your personal information:</p>
+  <p><%= current_user.email %></p>
+  <p><%= current_user.address %></p>
 
-<!-- Render the _index.html.erb such as tools/_index.html.erb, user: current_user -->
+  <!-- Render the _index.html.erb such as tools/_index.html.erb, user: current_user -->
 
-<%= render 'tools/index.html.erb', user: current_user %>
+  <%= render 'tools/index.html.erb', user: current_user %>
+</div>

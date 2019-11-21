@@ -1,6 +1,11 @@
 <!-- Display the listing of the tools for a user -->
+<h2>Those are all your tools for rent:</h2>
 <% @user_tools.each do |tool| %>
-<p><%= tool.name %></p>
-<p><%= tool.description %></p>
-<p><%= tool.address %></p>
+  <div class="card-tool">
+    <p>Tool's name: <%= tool.name %></p>
+    <p>Description: <%= tool.description %></p>
+    <p>Adresse: <%= tool.address %></p>
+    <%= link_to "see details", tool_path(tool.id), class: 'detail-button'  %>
+    <%= link_to "update tool", edit_tool_path(tool.id), class: 'detail-button'  %>
+  </div>
 <% end %>
