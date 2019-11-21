@@ -7,16 +7,33 @@ class BookingsController < ApplicationController
   # Routes
   # Views
 
+
   def show
     @tool = Tool.find(params[:id])
     @tool.bookings
   end
 
-  def create
-
+  def new
+    @tool = Tool.find(params[:tool_id])
+    @booking = Booking.new
   end
 
-  def new
-    @booking = Booking.new
+  def create
+    @booking = Booking.new(booking_params)
+    @booking.user_id = current_user.id
+    @tool = Tool.find(params[:tool_id])
+    @booking.tool_id = @tool.id
+
+    if @booking.save
+      redirect_to @tool, notice: 'Booking was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:user_id, :tool_id, :rental_end, :rental_start)
   end
 end

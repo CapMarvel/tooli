@@ -1,61 +1,25 @@
-<h1>Tools#index</h1>
+<div class="banner">
+<h2 class="banner-title">Book a tool for free!</h2>
+</div>
 
-
-<% if current_user %>
-<p><%= link_to 'Add a new tool', new_tool_path %></p>
-
-<!-- <p><%= link_to 'Book a tool', bookings_path %></p> -->
+<div class="container">
  <% @tools.each do |tool| %>
-   <ul>
-    <li><%= link_to tool.name, tool_path(tool.id) %></li>
-  </ul>
+    <div class= "card">
+    <%= link_to tool.name, tool_path(tool.id) %>
+    </div>
   <% end %>
-<% if current_user %>
-<% end %>
-
-<% end %>
+</div>
 
     <nav class="navbar navbar-expand-xl py-0 position-absolute w-100" id="navbar">
       <!-- nav for xl screens -->
 
-      <div class="d-none d-xl-flex flex-grow-1" id="xlNavbar">
-        <a class="navbar-brand py-0 pr-0 pl-2 text-white" href="#">Tooli</a>
-        <div class="navbar-nav ml-auto">
-          <p><%= link_to 'Book a tool', bookings_path %></p>
-          <p><%= link_to 'Add a new tool', new_tool_path %></p>
-         <%= link_to 'Sign in', new_user_session_path %>
-          <%= link_to 'logout', destroy_user_session_path, method: 'delete'  %>
-          <a class="nav-item nav-link py-0 px-2 text-white" href="#"><div class="px-2"></div></a>
-          <a class="nav-item nav-link py-0 px-2 text-white" href="#"><div class="px-2">Sign up</div></a>
-
-
-          <a class="nav-item nav-link py-0 px-2 text-white" href="#"><div class="px-2">Log in</div></a>
-        </div>
-      </div>
 
       <!-- button and collapsed menu -->
 
-      <a class="navbar-toggler navbar-brand py-0 pr-0 pl-2 border-0 position-relative collapsed" role="button" data-toggle="collapse" href="#navbarMenu" id="navbarMenuToggler">Tooli</a>
 
-      <div class="collapse navbar-collapse px-4 pb-4 font-weight-light bg-white position-absolute" id="navbarMenu">
-        <a class="nav-item nav-link" href="#">Home</a>
-        <hr/>
-        <a class="nav-item nav-link" href="#">Share with friends</a>
-        <a class="nav-item nav-link" href="#">Refer vendors</a>
-        <hr/>
-        <a class="nav-item nav-link" href="#">Sign up</a>
-        <a class="nav-item nav-link" href="#">Log in</a>
-        <hr/>
-        <a class="nav-item nav-link" href="#">Help</a>
-      </div>
-    </nav>
 
     <!-- Hero content -->
-    <div id="hero" class="position-relative">
-      <div class="container-fluid">
-        <h2 class="mb-0 pb-3 pb-sm-4 text-white d-xl-none">Rent great tools.</h2>
-      </div>
-    </div>
+
 
     <!-- Search form -->
     <!-- <div id="searchForm">
@@ -94,12 +58,9 @@
 
     <div class="container-fluid">
       <!-- First Section -->
-      <div class="pt-3 pt-lg-4 pt-xl-5 headings">
-        <h4 class="mb-3">Find great tools in your city</h4>
-        <p><span class="d-none d-md-inline">Check some of our options in Berlin</b></p>
-      </div>
 
-      <div class="row flex-nowrap pt-2 scrollableRow no-gutters">
+
+      <div class="row flex-nowrap pt-2 scrollableRow no-gutters" id="testimonies">
         <div class="col-12 col-md-6 col-xl-4">
           <div class="review">
             <div class="aspectRatioBox mb-3 rounded" style="background-image: url('https://res.cloudinary.com/leocosta/image/upload/v1574247357/todd-quackenbush-IClZBVw5W5A-unsplash_k0fiew.jpg')">
@@ -178,7 +139,7 @@
 
       <hr class="mt-2 mt-md-3 mb-0" />
       <!-- Home Listings -->
-      <div class="pt-4 pt-lg-5 headings">
+      <div class="pt-4 pt-lg-5 headings"></div>
 
 </footer>
 
@@ -187,4 +148,4 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</html>
+
