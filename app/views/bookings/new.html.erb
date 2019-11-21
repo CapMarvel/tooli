@@ -4,7 +4,7 @@
   <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
     <h2>Flatpickr Demo</h2>
 
-    <%= simple_form_for @booking, method: "post" do |f| %>
+    <%= simple_form_for ([@tool, @booking]), method: "post" do |f| %>
       <%= f.input :rental_start, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.input :rental_end, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.submit "Go", class: "btn btn-primary" %>
