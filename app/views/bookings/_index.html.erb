@@ -1,4 +1,4 @@
+<h4>History: You rented</h3>
 <% @user_bookings.each do |b| %>
-<p><%= b.rental_start %></p>
-<p><%= b.rental_end %></p>
+<p><%= b.tool.name %> from <%= b.rental_start %> until <%= b.rental_end %> - Owner: <%= b.tool.user.name %></p>
 <% end %>
