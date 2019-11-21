@@ -1,6 +1,6 @@
 <div id="hero" class="position-relative">
       <div class="container-fluid">
-        <h2 class="mb-0 pb-3 pb-sm-4 text-white d-xl-none">Rent tools for free!</h2>
+        <h2 class="mb-0 pb-3 pb-sm-4 text-white d-xl-none" id="banner-title">Rent tools for free!</h2>
       </div>
     </div>
 
@@ -18,37 +18,11 @@
     <nav class="navbar navbar-expand-xl py-0 position-absolute w-100" id="navbar">
       <!-- nav for xl screens -->
 
-      <div class="d-none d-xl-flex flex-grow-1" id="xlNavbar">
-        <a class="navbar-brand py-0 pr-0 pl-2 text-white" href="#">Tooli</a>
-        <div class="navbar-nav ml-auto">
-          <p><%= link_to 'Book a tool', bookings_path %></p>
-          <p><%= link_to 'Add a new tool', new_tool_path %></p>
-         <%= link_to 'Sign in', new_user_session_path %>
-          <%= link_to 'logout', destroy_user_session_path, method: 'delete'  %>
-          <a class="nav-item nav-link py-0 px-2 text-white" href="#"><div class="px-2"></div></a>
-          <a class="nav-item nav-link py-0 px-2 text-white" href="#"><div class="px-2">Sign up</div></a>
-
-
-          <a class="nav-item nav-link py-0 px-2 text-white" href="#"><div class="px-2">Log in</div></a>
-        </div>
       </div>
 
       <!-- button and collapsed menu -->
 
-      <a class="navbar-toggler navbar-brand py-0 pr-0 pl-2 border-0 position-relative collapsed" role="button" data-toggle="collapse" href="#navbarMenu" id="navbarMenuToggler">Tooli</a>
 
-      <div class="collapse navbar-collapse px-4 pb-4 font-weight-light bg-white position-absolute" id="navbarMenu">
-        <a class="nav-item nav-link" href="#">Home</a>
-        <hr/>
-        <a class="nav-item nav-link" href="#">Share with friends</a>
-        <a class="nav-item nav-link" href="#">Refer vendors</a>
-        <hr/>
-        <a class="nav-item nav-link" href="#">Sign up</a>
-        <a class="nav-item nav-link" href="#">Log in</a>
-        <hr/>
-        <a class="nav-item nav-link" href="#">Help</a>
-      </div>
-    </nav>
 
     <!-- Hero content -->
 
@@ -90,10 +64,7 @@
 
     <div class="container-fluid">
       <!-- First Section -->
-      <div class="pt-3 pt-lg-4 pt-xl-5 headings">
-        <h4 class="mb-3">Find great tools in your city</h4>
-        <p><span class="d-none d-md-inline">Check some of our options in Berlin</b></p>
-      </div>
+
 
       <div class="row flex-nowrap pt-2 scrollableRow no-gutters">
         <div class="col-12 col-md-6 col-xl-4">
