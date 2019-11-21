@@ -14,11 +14,26 @@ class BookingsController < ApplicationController
     @tool.bookings
   end
 
-  def create
-
-  end
-
   def new
     @booking = Booking.new
+  end
+
+  def create
+    @booking = Booking.new(booking_params)
+    @booking.user_id = current_user.id
+    @tool = Tool.find(params[:tool_id])
+    @booking.tool_id = @tool.id
+
+    if @booking.save
+      redirect_to @tool, notice: 'Booking was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:user_id, :tool_id, :rental_end, :rental_start)
   end
 end
