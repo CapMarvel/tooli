@@ -1,0 +1,6 @@
+<!-- Display the listing of the tools for a user -->
+<% @user_tools.each do |tool| %>
+<p><%= tool.name %></p>
+<p><%= tool.description %></p>
+<p><%= tool.address %></p>
+<% end %>
