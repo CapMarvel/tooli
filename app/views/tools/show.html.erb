@@ -3,8 +3,13 @@
 <p> Location of the tool: <%= @tool.address%></p>
 <p> Owner of the Tool: <%= @tool.user.name %></p>
 <p> Picture of the Location </p>
-<p> Edit Delete Options  </p>
-<%= link_to "Back to home", root_path %>
-<%= link_to "Back to index", tools_path %>
+
+
+
+
+<p><%= link_to 'Edit tool', edit_tool_path %></p>
+<p><%= link_to 'Delete tool', tool_path, method: :delete %></p>
+
 <p><%= link_to "Book", new_tool_booking_path(@tool) %></p>
 
+<%= link_to "Back to index", tools_path %>
