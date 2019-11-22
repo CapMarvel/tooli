@@ -1,10 +1,14 @@
+<div class="button">
+  <%= link_to "Back to index", tools_path %>
+</div>
+
+<div class="tool-card">
+  <div class="headline-and-actions">
 <h1>Tool: <%= @tool.name %></h1>
-<p> Description of the tool: <%=  @tool.description%></p>
-<p> Location of the tool: <%= @tool.address%></p>
-<% if @tool.photo.present? %>
-<%= cl_image_tag @tool.photo, height: 300, width: 400, crop: :fill %>
-<% end %>
-<p> Owner of the Tool: <%= @tool.user.name %> </p>
+
+<% unless @tool.user == current_user %>
+ <p><%= link_to "Book", new_tool_booking_path(@tool) %></p>
+ <% end %>
 
 <% if policy(@tool).edit? %>
   <p><%= link_to 'Edit tool', edit_tool_path %></p>
@@ -12,11 +16,19 @@
 <% if policy(@tool).destroy? %>
   <p><%= link_to 'Delete tool', tool_path, method: :delete %></p>
 <% end %>
+</div>
 
-<% unless @tool.user == current_user %>
- <p><%= link_to "Book", new_tool_booking_path(@tool) %></p>
- <% end %>
+<div class="tool-details">
+<% if @tool.photo.present? %>
+<%= cl_image_tag @tool.photo, height: 300, width: 400, crop: :fill %>
+<% end %>
 
-<%= link_to "Back to index", tools_path %>
+<p> Owner of the Tool: <%= @tool.user.name %> </p>
+<p> Description of the tool: <%=  @tool.description%></p>
+<p> Location of the tool: <%= @tool.address%></p>
+  </div>
+</div>
+
+
  <!-- If I'm the creator, I can't see 'Book' option -->
 
