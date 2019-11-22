@@ -5,7 +5,7 @@
 <div class="container">
  <% @tools.each do |tool| %>
     <div class= "card">
-    <%= link_to tool.name, tool_path(tool.id) %>
+        <%= link_to tool.name, tool_path(tool.id) %>
     </div>
   <% end %>
 </div>

@@ -14,6 +14,10 @@
     <%= f.label :address %>
     <%= f.text_field :address %>
   </div>
+  <div>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  </div>
   <div class="submit-button">
   <%= f.submit %>
   </div>
