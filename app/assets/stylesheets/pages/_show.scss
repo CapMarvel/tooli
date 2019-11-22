@@ -1,10 +1,12 @@
 @import "home";
 
+
 .tool-card {
-  margin: 0 30px;
+  margin: 15px 30px;
   width: 650px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 4px;
+  object-position: 50% 50%;
 }
 
 .headline-and-actions {

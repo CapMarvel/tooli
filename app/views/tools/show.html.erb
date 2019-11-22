@@ -1,21 +1,27 @@
 <div class="button">
-  <%= link_to "Back to index", tools_path %>
+  <button type="button" class="index"><%= link_to "Back to index", tools_path %></button>
 </div>
-
 <div class="tool-card">
   <div class="headline-and-actions">
     <span class="tool-title">Tool: <%= @tool.name %></span>
 
     <span class="actions">
     <% unless @tool.user == current_user %>
+    <button>
     <%= link_to "Book", new_tool_booking_path(@tool) %>
+    </button>
     <% end %>
 
     <% if policy(@tool).edit? %>
+    <button>
     <%= link_to 'Edit tool', edit_tool_path %>
+    </button>
     <% end %>
+
     <% if policy(@tool).destroy? %>
+    <button>
     <%= link_to 'Delete tool', tool_path, method: :delete %>
+    </button>
     <% end %>
     </span>
   </div>

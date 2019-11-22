@@ -1,0 +1,19 @@
+button {
+  background-color: #f75854;
+  border-radius: 4px;
+  color: white;
+  padding: 8px 18px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+button:hover {
+  background-color: #f28482;
+}
+
+button.index {
+margin-left: 30px;
+}
