@@ -10,7 +10,11 @@
 .banner-title {
   display: flex;
   color: #f75854;
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 5px #000;
   justify-content: center;
   padding-top: 70px;
+}
+
+.banner h1 {
+  font-size: 60px;
 }
