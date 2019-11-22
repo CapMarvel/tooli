@@ -4,31 +4,35 @@
 
 <div class="tool-card">
   <div class="headline-and-actions">
-<h1>Tool: <%= @tool.name %></h1>
+    <span class="tool-title">Tool: <%= @tool.name %></span>
 
-<% unless @tool.user == current_user %>
- <p><%= link_to "Book", new_tool_booking_path(@tool) %></p>
- <% end %>
+    <span class="actions">
+    <% unless @tool.user == current_user %>
+    <%= link_to "Book", new_tool_booking_path(@tool) %>
+    <% end %>
 
-<% if policy(@tool).edit? %>
-  <p><%= link_to 'Edit tool', edit_tool_path %></p>
-<% end %>
-<% if policy(@tool).destroy? %>
-  <p><%= link_to 'Delete tool', tool_path, method: :delete %></p>
-<% end %>
-</div>
+    <% if policy(@tool).edit? %>
+    <%= link_to 'Edit tool', edit_tool_path %>
+    <% end %>
+    <% if policy(@tool).destroy? %>
+    <%= link_to 'Delete tool', tool_path, method: :delete %>
+    <% end %>
+    </span>
+  </div>
 
-<div class="tool-details">
-<% if @tool.photo.present? %>
-<%= cl_image_tag @tool.photo, height: 300, width: 400, crop: :fill %>
-<% end %>
+  <div class="tool-picture-details">
+    <% if @tool.photo.present? %>
+    <%= cl_image_tag @tool.photo, height: 300, width: 400, crop: :fill %>
+    <% end %>
 
-<p> Owner of the Tool: <%= @tool.user.name %> </p>
-<p> Description of the tool: <%=  @tool.description%></p>
-<p> Location of the tool: <%= @tool.address%></p>
+    <span class="details">
+    Owner: <%= @tool.user.name %>
+    Description: <%=  @tool.description%>
+    Location: <%= @tool.address%>
+    </span>
   </div>
 </div>
 
 
- <!-- If I'm the creator, I can't see 'Book' option -->
+<!-- If I'm the creator, I can't see 'Book' option -->
 

@@ -1,5 +1,21 @@
 @import "home";
 
 .tool-card {
+  margin: 0 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
 
+.headline-and-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tool-title {
+  font-size: 25px;
+}
+
+.tools-picture-details {
+  display: flex;
+  justify-content: center
 }
