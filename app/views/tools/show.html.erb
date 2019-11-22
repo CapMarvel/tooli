@@ -1,9 +1,10 @@
 <h1>Tool: <%= @tool.name %></h1>
 <p> Description of the tool: <%=  @tool.description%></p>
 <p> Location of the tool: <%= @tool.address%></p>
+<% if @tool.photo.present? %>
 <%= cl_image_tag @tool.photo, height: 300, width: 400, crop: :fill %>
+<% end %>
 <p> Owner of the Tool: <%= @tool.user.name %></p>
-<p> Picture of the Location </p>
 
 <% if policy(@tool).edit? %>
   <p><%= link_to 'Edit tool', edit_tool_path %></p>
@@ -12,6 +13,10 @@
   <p><%= link_to 'Delete tool', tool_path, method: :delete %></p>
 <% end %>
 
-<p><%= link_to "Book", new_tool_booking_path(@tool) %></p>
+<% unless @tool.user == current_user %>
+ <p><%= link_to "Book", new_tool_booking_path(@tool) %></p>
+ <% end %>
 
 <%= link_to "Back to index", tools_path %>
+ <!-- If I'm the creator, I can't see 'Book' option -->
+
