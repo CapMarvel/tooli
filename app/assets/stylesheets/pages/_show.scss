@@ -1,0 +1,39 @@
+@import "home";
+
+
+.tool-card {
+  margin: 15px 30px;
+  width: 750px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  object-position: 50% 50%;
+  margin:auto
+}
+
+.headline-and-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.tool-title {
+  font-size: 25px;
+}
+
+.tool-picture-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+
+}
+
+.tool-picture-details img {
+
+
+}
+
+.tool-details {
+  margin-left: 15px;
+}
+

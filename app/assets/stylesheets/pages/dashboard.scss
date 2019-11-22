@@ -1,0 +1,65 @@
+@media (min-width: 1200px) {
+  .container-fluid {
+    max-width: 1080px;
+  }
+}
+
+.container-fluid, .profile_container {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+}
+
+.headline {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 12px;
+}
+
+.profile_information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rendered {
+  display: flex;
+  padding-top: 24px;
+}
+
+.tools {
+  width: 33%;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.tools h4 {
+  padding: 12px;
+}
+
+.tools p {
+  padding-left: 5px;
+}
+
+.booking_history {
+  width: 66%;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.booking_history h4 {
+  padding: 12px;
+}
+
+.booking_history p {
+  padding-left: 12px;
+}
+
+.profile {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  padding: 12px;
+}
