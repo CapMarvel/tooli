@@ -7,7 +7,7 @@
     <%= simple_form_for ([@tool, @booking]), method: "post" do |f| %>
       <%= f.input :rental_start, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.input :rental_end, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.submit "Book!", class: "btn btn-primary" %>
+      <%= f.submit "Book!", class: "button" %>
     <% end %>
   </div>
 </div>
