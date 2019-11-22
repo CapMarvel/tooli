@@ -8,13 +8,14 @@
  <% @tools.each do |tool| %>
     <div class= "card">
       <% if tool.photo.present? %>
-        <%= image_tag(tool.photo_url) %>
+        <%= image_tag(tool.photo_url)%>
       <% else %>
         <%= image_tag("https://res.cloudinary.com/leocosta/image/upload/v1574247435/jeshoots-com-VdOO4_HFTWM-unsplash_bvcroq.jpg") %>
       <% end %>
       <%= link_to tool.name, tool_path(tool.id) %>
+      <%= link_to "", tool_path(tool.id), class: "tool-card-link" %>
     </div>
-  <% end %>
+<% end %>
 </div>
 
     <nav class="navbar navbar-expand-xl py-0 position-absolute w-100" id="navbar">
