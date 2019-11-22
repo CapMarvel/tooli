@@ -9,5 +9,13 @@
   <%= f.label :address %>
   <%= f.text_field :address %>
 
+  <% if @tool.photo.present? %>
+    <%= image_tag @tool.photo_url %>
+  <% end%>
+
+  <%= f.file_field :photo %>
+  <%= f.hidden_field :photo_cache, as: :hidden %>
+
+
   <%= f.submit %>
 <% end %>

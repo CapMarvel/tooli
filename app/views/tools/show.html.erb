@@ -1,12 +1,16 @@
 <h1>Tool: <%= @tool.name %></h1>
 <p> Description of the tool: <%=  @tool.description%></p>
 <p> Location of the tool: <%= @tool.address%></p>
+<%= cl_image_tag @tool.photo, height: 300, width: 400, crop: :fill %>
 <p> Owner of the Tool: <%= @tool.user.name %></p>
 <p> Picture of the Location </p>
 
-
-<p><%= link_to 'Edit tool', edit_tool_path %></p>
-<p><%= link_to 'Delete tool', tool_path, method: :delete %></p>
+<% if policy(@tool).edit? %>
+  <p><%= link_to 'Edit tool', edit_tool_path %></p>
+<% end %>
+<% if policy(@tool).destroy? %>
+  <p><%= link_to 'Delete tool', tool_path, method: :delete %></p>
+<% end %>
 
 <p><%= link_to "Book", new_tool_booking_path(@tool) %></p>
 
