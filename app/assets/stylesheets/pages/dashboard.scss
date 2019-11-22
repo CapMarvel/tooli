@@ -28,16 +28,34 @@
 
 .tools {
   width: 33%;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
 }
 
 .tools h4 {
-  padding-bottom: 12px;
+  padding: 12px;
 }
 
 .booking_history {
   width: 66%;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin-left: 8px;
 }
 
 .booking_history h4 {
-  padding-bottom: 12px;
+  padding: 12px;
+}
+
+.booking_history p {
+  padding-left: 12px;
+}
+
+.profile {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  padding: 12px;
 }
