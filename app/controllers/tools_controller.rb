@@ -19,7 +19,7 @@ class ToolsController < ApplicationController
     authorize @tool
 
     @tool.user_id = current_user.id
-    if @tool.save!
+    if @tool.save
       redirect_to @tool
     else
       render :new
