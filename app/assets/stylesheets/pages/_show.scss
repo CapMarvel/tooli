@@ -2,6 +2,7 @@
 
 .tool-card {
   margin: 0 30px;
+  width: 650px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 4px;
 }
@@ -9,13 +10,27 @@
 .headline-and-actions {
   display: flex;
   justify-content: space-between;
+  padding: 5px;
 }
 
 .tool-title {
   font-size: 25px;
 }
 
-.tools-picture-details {
+.tool-picture-details {
   display: flex;
-  justify-content: center
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+
 }
+
+.tool-picture-details img {
+
+
+}
+
+.tool-details {
+  margin-left: 15px;
+}
+

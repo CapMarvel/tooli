@@ -24,12 +24,11 @@
     <% if @tool.photo.present? %>
     <%= cl_image_tag @tool.photo, height: 300, width: 400, crop: :fill %>
     <% end %>
-
-    <span class="details">
-    Owner: <%= @tool.user.name %>
-    Description: <%=  @tool.description%>
-    Location: <%= @tool.address%>
-    </span>
+    <div class="tool-details">
+    <p><strong>Owner:</strong> <%= @tool.user.name %></p>
+    <p><strong>Description:</strong> <%=  @tool.description%></p>
+    <p><strong>Location:</strong> <%= @tool.address%></p>
+    </div>
   </div>
 </div>
 
