@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.card {
+  text-align: center;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.card:hover {
+  border: 1px solid grey;
+}
+
+.card img {
+  max-height: 150px;
+  object-fit: cover;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a.hover {
+  text-decoration: none;
+}
+
+#navbar {
+  display: block;
+}

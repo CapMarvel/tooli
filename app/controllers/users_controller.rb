@@ -5,5 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user_tools = current_user.tools
+    @user_bookings = Booking.where(user: current_user)
+    authorize(current_user)
   end
 end

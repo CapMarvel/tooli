@@ -1,0 +1,20 @@
+<%= form_for(@tool) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <% if @tool.photo.present? %>
+    <%= image_tag @tool.photo_url, width: 100%>
+  <% end%>
+
+  <%= f.file_field :photo %>
+  <%= f.hidden_field :photo_cache, as: :hidden %>
+
+
+  <%= f.submit %>
+<% end %>

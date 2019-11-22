@@ -7,13 +7,17 @@ class BookingsController < ApplicationController
   # Routes
   # Views
 
+
   def show
     @tool = Tool.find(params[:id])
+    authorize @booking
     @tool.bookings
   end
 
   def new
-    @booking = Booking.new
+    @tool = Tool.find(params[:tool_id])
+    @booking = @tool.bookings.new
+    authorize @booking
   end
 
   def create
@@ -21,7 +25,7 @@ class BookingsController < ApplicationController
     @booking.user_id = current_user.id
     @tool = Tool.find(params[:tool_id])
     @booking.tool_id = @tool.id
-
+    authorize @booking
     if @booking.save
       redirect_to @tool, notice: 'Booking was successfully created.'
     else
