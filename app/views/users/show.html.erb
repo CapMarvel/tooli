@@ -1,12 +1,24 @@
-<h1>Your profile</h1>
+<div class="profile_container">
+  <div class="profile">
+    <div class="headline">
+      <h3>Your profile</h3>
+    </div>
+    <div class="profile_information">
+      <h5><%= current_user.name %></h5>
 
-<h2><%= current_user.name %></h2>
-
-<p>Your personal information</p>
-<p><%= current_user.email %></p>
-<p><%= current_user.address %></p>
+<!--<p>Your personal information</p>-->
+      <p><%= current_user.email %></p>
+      <p><%= current_user.address %></p>
+    </div>
+  </div>
 
 <!-- Render the _index.html.erb such as tools/_index.html.erb, user: current_user -->
-
-<%= render 'tools/index.html.erb', user: current_user %>
-<%= render 'bookings/index.html.erb', user: current_user %>
+  <div class="rendered">
+    <div class="tools">
+      <%= render 'tools/index.html.erb', user: current_user %>
+    </div>
+    <div class="booking_history">
+      <%= render 'bookings/index.html.erb', user: current_user %>
+    </div>
+  </div>
+</div>

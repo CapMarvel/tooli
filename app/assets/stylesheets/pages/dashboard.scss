@@ -1,0 +1,43 @@
+@media (min-width: 1200px) {
+  .container-fluid {
+    max-width: 1080px;
+  }
+}
+
+.container-fluid, .profile_container {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+}
+
+.headline {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 12px;
+}
+
+.profile_information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rendered {
+  display: flex;
+  padding-top: 24px;
+}
+
+.tools {
+  width: 33%;
+}
+
+.tools h4 {
+  padding-bottom: 12px;
+}
+
+.booking_history {
+  width: 66%;
+}
+
+.booking_history h4 {
+  padding-bottom: 12px;
+}
