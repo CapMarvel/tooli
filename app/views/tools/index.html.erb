@@ -5,63 +5,24 @@
 <div class="container">
  <% @tools.each do |tool| %>
     <div class= "card">
-        <%= link_to tool.name, tool_path(tool.id) %>
+      <% if tool.photo.present? %>
+        <%= image_tag(tool.photo_url) %>
+      <% else %>
+        <%= image_tag("https://res.cloudinary.com/leocosta/image/upload/v1574247435/jeshoots-com-VdOO4_HFTWM-unsplash_bvcroq.jpg") %>
+      <% end %>
+      <%= link_to tool.name, tool_path(tool.id) %>
     </div>
   <% end %>
 </div>
 
     <nav class="navbar navbar-expand-xl py-0 position-absolute w-100" id="navbar">
-      <!-- nav for xl screens -->
-
-
-      <!-- button and collapsed menu -->
-
-
-
-    <!-- Hero content -->
-
-
-    <!-- Search form -->
-    <!-- <div id="searchForm">
-      <div class="container-fluid">
-        <form class="py-4 rounded bg-white">
-          <h2
-          class="d-none d-xl-block">Rent all the tools you need
-          </h2>
-          <div class="form-group">
-            <label for="where"><small><b>WHERE</b></small></label>
-            <input type="text" class="form-control form-control-lg rounded" id="where" placeholder="Anywhere">
-          </div>
-          <div class="row no-gutters">
-            <div class="form-group col-6">
-              <label for="checkin"><small><b>RENTAL START</b></small></label>
-              <input type="date" class="form-control form-control-lg rounded-left rounded-left" id="checkin" placeholder="mm/dd/yyyy">
-            </div>
-            <div class="form-group col-6">
-              <label for="checkout"><small><b>RENTAL END</b></small></label>
-              <input type="date" class="form-control form-control-lg rounded-right border-left-0" id="checkout" placeholder="mm/dd/yyyy">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputAddress"><small><b>Tool options</b></small></label>
-            <select class="form-control form-control-lg rounded" id="guests">
-              <option>Find a tool</option>
-              <option>Offer a tool</option>
-            </select>
-          </div>
-          <div class="d-flex flex-column align-items-xl-end">
-            <button type="submit" class="btn btn-danger px-4 mt-2">Search</button>
-          </div>
-        </form>
-      </div>
-    </div> -->
 
     <div class="container-fluid">
       <!-- First Section -->
 
 
       <div class="row flex-nowrap pt-2 scrollableRow no-gutters" id="testimonies">
-        <div class="col-12 col-md-6 col-xl-4">
+        <div class="col-12 col-md-4 col-xl-4">
           <div class="review">
             <div class="aspectRatioBox mb-3 rounded" style="background-image: url('https://res.cloudinary.com/leocosta/image/upload/v1574247357/todd-quackenbush-IClZBVw5W5A-unsplash_k0fiew.jpg')">
             </div>
@@ -84,7 +45,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-xl-4">
+        <div class="col-12 col-md-4 col-xl-4">
           <div class="review">
             <div class="aspectRatioBox mb-3 rounded" style="background-image: url('https://res.cloudinary.com/leocosta/image/upload/v1574247435/jeshoots-com-VdOO4_HFTWM-unsplash_bvcroq.jpg')">
             </div>
@@ -107,7 +68,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-xl-4">
+        <div class="col-12 col-md-4 col-xl-4">
           <div class="review">
             <div class="aspectRatioBox mb-3 rounded" style="background-image: url('https://res.cloudinary.com/leocosta/image/upload/v1574247514/matt-artz-dh3zAdGGOIY-unsplash_gx05if.jpg')">
             </div>
