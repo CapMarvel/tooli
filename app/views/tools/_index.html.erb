@@ -1,5 +1,5 @@
 <!-- Display the listing of the tools for a user -->
 <h4>Your tools</h4>
 <% @user_tools.each do |tool| %>
-<p><%= tool.name %> - <%= link_to 'Edit', edit_tool_path %> <%= link_to 'Delete', tool_path, method: :delete %></p>
+<p><%= tool.name %> - <button>  <%= link_to 'Edit', edit_tool_path %> </button> <button> <%= link_to 'Delete', tool_path, method: :delete %></button> </p>
 <% end %>
