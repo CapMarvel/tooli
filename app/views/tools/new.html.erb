@@ -1,25 +1,24 @@
-<h1>Create a new tool</h1>
-
-<div class="add-tool-form">
-  <%= simple_form_for(@tool) do |f| %>
-  <div class="field">
-    <%= f.label :name  %>
-    <%= f.text_field :name  %>
-  </div>
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
-  <div>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  </div>
-  <div class="submit-button">
-  <%= f.submit %>
-  </div>
-  <% end %>
+<div class="form-style-8">
+  <h2>Create a new tool</h2>
+    <%= simple_form_for(@tool) do |f| %>
+    <div class="field">
+      <%= f.label :name  %>
+      <%= f.text_field :name, input_html: { class: "form-textfield" } %>
+    </div>
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_field :description, input_html: { class: "form-textfield" } %>
+    </div>
+    <div class="field">
+      <%= f.label :address %>
+      <%= f.text_field :address, input_html: { class: "form-textfield" } %>
+    </div>
+    <div>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    </div>
+    <div class="submit-button">
+    <%= f.submit %>
+    </div>
+    <% end %>
 </div>
