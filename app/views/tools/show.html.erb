@@ -4,7 +4,7 @@
 <% if @tool.photo.present? %>
 <%= cl_image_tag @tool.photo, height: 300, width: 400, crop: :fill %>
 <% end %>
-<p> Owner of the Tool: <%= @tool.user.name %></p>
+<p> Owner of the Tool: <%= @tool.user.name %> </p>
 
 <% if policy(@tool).edit? %>
   <p><%= link_to 'Edit tool', edit_tool_path %></p>
